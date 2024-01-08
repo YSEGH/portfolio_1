@@ -1,0 +1,14 @@
+.page {
+}
+.page__wrapper {
+  max-width: var(--max-width);
+  width: var(--width);
+  min-height: 100vh;
+}
+.magnetic-element {
+  position: relative;
+  --y: 0;
+  --x: 0;
+  top: var(--y);
+  left: var(--x);
+}

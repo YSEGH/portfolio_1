@@ -1,0 +1,22 @@
+.icon-burger {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+}
+.icon-burger__path {
+  height: 4px;
+  width: 100%;
+}
+.path-1,
+.path-2 {
+  transform-origin: center center;
+}
+.path-3,
+.path-4 {
+  transform-origin: center center;
+}

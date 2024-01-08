@@ -1,0 +1,14 @@
+.text_translation_y-container {
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text_translation_y-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.text_translation_y-text {
+  user-select: none;
+}
