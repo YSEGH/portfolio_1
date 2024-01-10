@@ -1,34 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import style from "./style/ScrollableText.module.css";
 import cx from "classnames";
 import gsap from "gsap";
 import { ScrollToPlugin } from "gsap/all";
+import throttle from "lodash.throttle";
 
 type Props = {
-  id: number;
   text: string;
   customContainerClass?: string;
   customTextClass?: string;
   customContainerStyle?: React.CSSProperties;
   customTextStyle?: React.CSSProperties;
   reverse?: boolean;
-  position: number;
 };
 
 const ScrollableText: React.FC<Props> = ({
-  id,
   text,
   customContainerClass = "",
   customContainerStyle,
   customTextClass,
   customTextStyle,
   reverse = false,
-  position,
 }) => {
+  const rootContainer = useRef<number>(0);
+  const [cursorXPosition, setCursorXPosition] = useState(50);
   const textRef = useRef(null);
-
   const containerRef = useRef(null);
 
+  const onMouseMove = useCallback((e: globalThis.MouseEvent) => {
+    setCursorXPosition(Math.round((e.clientX / rootContainer.current) * 100));
+  }, []);
+
+  /* Update text position */
   useEffect(() => {
     gsap.registerPlugin(ScrollToPlugin);
     if (containerRef.current && textRef.current) {
@@ -44,12 +47,12 @@ const ScrollableText: React.FC<Props> = ({
 
       let windowXCenter = windowWidth / 2;
 
-      if (position < 50) {
-        positionX = windowXCenter - windowWidth * (position / 100);
+      if (cursorXPosition < 50) {
+        positionX = windowXCenter - windowWidth * (cursorXPosition / 100);
         percent = positionX / windowXCenter;
         translateX = scrollGap * percent;
       } else {
-        positionX = windowWidth * (position / 100) - windowXCenter;
+        positionX = windowWidth * (cursorXPosition / 100) - windowXCenter;
         percent = positionX / windowXCenter;
         translateX = -scrollGap * percent;
       }
@@ -62,7 +65,20 @@ const ScrollableText: React.FC<Props> = ({
     }
 
     return () => {};
-  }, [position]);
+  }, [cursorXPosition]);
+
+  // Add mouseMove listener.
+  useEffect(() => {
+    if (!rootContainer.current) {
+      rootContainer.current = (
+        document.querySelector("#root") as HTMLDivElement
+      ).getBoundingClientRect().width;
+    }
+    window.addEventListener("mousemove", throttle(onMouseMove, 100));
+    return () => {
+      window.removeEventListener("mousemove", throttle(onMouseMove, 100));
+    };
+  }, []);
 
   return (
     <div

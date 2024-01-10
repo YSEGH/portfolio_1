@@ -6,9 +6,14 @@
 }
 .text_translation_y-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
 }
+.text_translation_y-container:hover .text_translation_y-wrapper {
+  transform: translateY(-50%);
+}
 .text_translation_y-text {
   user-select: none;
+  margin: 0;
 }

@@ -3,6 +3,7 @@ import "./style/App.css";
 import Home from "./pages/Home/Home";
 import Lenis from "@studio-freight/lenis";
 import Menu from "./components/Menu/Menu";
+import About from "./pages/About/About";
 
 function App() {
   useEffect(() => {
@@ -22,8 +23,10 @@ function App() {
 
   return (
     <div className="app">
-      {/*  <Menu color="#000" />  */}
+      {/*       <Menu color="#FFF" />
+       */}{" "}
       <Home />
+      <About />
     </div>
   );
 }

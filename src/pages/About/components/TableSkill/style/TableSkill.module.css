@@ -1,0 +1,56 @@
+.table__skill {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.table__skill h4 {
+  font-family: Inter;
+  text-transform: uppercase;
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+.table__skill button {
+  font-family: Inter;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: #fff;
+  transition: 0.2s;
+}
+.table__skill button:hover {
+  color: #000;
+}
+.table__skill h6 {
+  font-family: Inter;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+}
+.table__filters {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.table__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.skill {
+  border: 1px solid #fff;
+  padding: 0.5rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
