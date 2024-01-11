@@ -10,7 +10,7 @@ const textStyle: React.CSSProperties = {
   fontFamily: "Fellows",
   fontSize: "48px",
   lineHeight: "50px",
-  fontWeight: 600,
+  fontWeight: 500,
   textTransform: "uppercase",
   color: "#fff",
 };
@@ -23,7 +23,7 @@ const Home: React.FC<Props> = () => {
         <div className="banner__header">
           <ScrollableText
             text="seghrouchni youssef"
-            customTextClass="banner__text banner__text-name"
+            customTextClass="banner__text banner__text__name"
             customTextStyle={{
               fontFamily: "Fellows",
               fontWeight: 700,

@@ -1,5 +1,3 @@
-.page {
-}
 .page__wrapper {
   max-width: var(--max-width);
   width: var(--width);
@@ -18,9 +16,34 @@
   max-width: 1280px;
   margin: auto;
 }
-.text__wrapper h2 {
+.custom__container__y {
+  padding: 96px 0;
+  max-width: 1280px;
+  margin: auto;
+}
+.custom__container__x {
+  padding: 0 128px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+h2 {
+  margin: 0;
   font-size: 80px;
 }
-.text__wrapper h4 {
+h3 {
+  margin: 0;
+  font-size: 40px;
+}
+h4 {
+  margin: 0;
   font-size: 32px;
+}
+h5 {
+  margin: 0;
+  font-size: 24px;
+}
+h6 {
+  margin: 0;
+  font-size: 20px;
 }

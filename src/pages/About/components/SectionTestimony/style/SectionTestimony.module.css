@@ -1,0 +1,15 @@
+.section__testimony {
+  position: relative;
+}
+.section__testimony__title {
+  position: absolute;
+  top: -68px;
+  left: 0;
+  right: 0;
+}
+.section__testimony__title h3 {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  color: #fff;
+}

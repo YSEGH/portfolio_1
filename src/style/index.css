@@ -12,10 +12,15 @@
   --max-width: 100vw;
   --red: rgba(255, 77, 77, 1);
   --red-opacity: rgba(255, 77, 77, 0.8);
+  --grey: #dbdbdb;
+  --light-grey: #f7f7f7;
   --screen-extra-large: 1440px;
   --screen-large: 1024px;
   --screen-medium: 780px;
   --screen-small: 480px;
+}
+* {
+  box-sizing: border-box;
 }
 
 body {

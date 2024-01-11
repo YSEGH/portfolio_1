@@ -5,11 +5,13 @@
   z-index: 200;
   height: 100vh;
   width: 100vw;
+  pointer-events: none;
 }
 .menu button {
   padding: 0;
   background-color: transparent;
   border: none;
+  pointer-events: all;
 }
 .menu_items_wrapper {
   padding: 1.5rem;
@@ -56,4 +58,10 @@
   text-transform: lowercase;
   font-weight: 400;
   margin: 0;
+}
+
+/* Menu items */
+.menu_item_wrapper {
+  cursor: pointer;
+  pointer-events: all;
 }

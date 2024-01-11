@@ -1,4 +1,10 @@
 /* Text wrapper */
+.section__text {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .text__wrapper {
   font-family: Inter;
   display: flex;
@@ -40,4 +46,40 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+/* Interest */
+.section__interest {
+  min-height: 100vh;
+}
+.section__interest h3 {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: left;
+  font-weight: 500;
+  margin-bottom: 96px;
+}
+.interest__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.interest {
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 20px;
+  background-color: red;
+}
+.interest__medium {
+  width: 320px;
+  height: 350px;
+}
+.interest__big {
+  width: 400px;
+  height: 350px;
+}
+.interest__small {
+  width: 150px;
+  height: 150px;
 }
