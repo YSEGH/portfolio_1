@@ -5,6 +5,7 @@ import Lenis from "@studio-freight/lenis";
 import Menu from "./components/Menu/Menu";
 import About from "./pages/About/About";
 import Footer from "./components/Footer/Footer";
+import Contact from "./pages/Contact/Contact";
 
 function App() {
   useEffect(() => {
@@ -24,8 +25,9 @@ function App() {
 
   return (
     <div className="app">
-      <Menu color="#000" />
+      <Contact />
       <Home />
+      <Menu color="#000" />
       <About />
       <Footer />
     </div>

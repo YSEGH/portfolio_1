@@ -2,6 +2,8 @@ import React from "react";
 import "./style/Home.css";
 import ScrollableText from "../../components/ScrollableText/ScrollableText";
 import TextAnimateY from "../../components/TextAnimateY/TextAnimateY";
+import ImageParallax from "../../components/ImageParallax/ImageParallax";
+import layoutBanner from "./assets/layout_banner.jpg";
 
 type Props = {};
 
@@ -19,6 +21,13 @@ const textJob = ["Full", "Stack", "Web", "Developer"];
 const Home: React.FC<Props> = () => {
   return (
     <div className="banner page">
+      <ImageParallax
+        id="test-1"
+        containerStyle={{ position: "absolute", top: 0 }}
+        height={window.innerHeight}
+        width={window.innerWidth}
+        src={layoutBanner}
+      />
       <div className="banner__wrapper page__wrapper">
         <div className="banner__header">
           <ScrollableText

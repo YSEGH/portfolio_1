@@ -3,7 +3,7 @@
   height: 220px;
   width: 100%;
   max-width: none;
-  transition: 0.1s;
+  transition: 0.25s;
 }
 .testimony:nth-child(2n) {
   background-color: var(--light-grey);
@@ -70,6 +70,7 @@
   color: #fff;
 }
 .testimony:hover .testimony__user {
+  color: #fff;
   opacity: 0;
 }
 .testimony:hover .testimony__wrapper__back {

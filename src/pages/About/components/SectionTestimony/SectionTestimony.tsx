@@ -48,8 +48,8 @@ const SectionTestimony: React.FC = ({}: Props) => {
         <h3>They talk about me.</h3>
       </div>
       <div className={style["testimony__container"]}>
-        {testimonies.map((testimony) => (
-          <Testimony testimony={testimony} />
+        {testimonies.map((testimony, i) => (
+          <Testimony testimony={testimony} key={`${testimony.name}-${i}`} />
         ))}
       </div>
     </section>

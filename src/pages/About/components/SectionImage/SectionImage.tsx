@@ -6,14 +6,11 @@ type Props = {
   height: number;
 };
 
-const SectionImage = ({ img, height }: Props) => {
-  console.log(img);
-
+const SectionImage: React.FC<Props> = ({ img, height }: Props) => {
   return (
-    <section
-      className={cx("section", style["section__image"])}
-      style={{ height: `${height}vh`, backgroundImage: `url(${img})` }}
-    ></section>
+    <section className={cx("section", style["section__image"])}>
+      <img className={style["parallax__img"]} src={`${img}`} />
+    </section>
   );
 };
 

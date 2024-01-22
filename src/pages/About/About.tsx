@@ -1,10 +1,11 @@
 import React from "react";
 import style from "./style/About.module.css";
 import cx from "classnames";
-import TableSkill from "./components/TableSkill/TableSkill";
-import SectionImage from "./components/SectionImage/SectionImage";
-import LayoutBanner from "./assets/layout_banner.jpg";
+import layoutBanner from "./assets/layout_banner.jpg";
 import SectionTestimony from "./components/SectionTestimony/SectionTestimony";
+import SectionInterest from "./components/SectionInterest/SectionInterest";
+import SectionSkill from "./components/SectionSkill/SectionSkill";
+import ImageParallax from "../../components/ImageParallax/ImageParallax";
 type Props = {};
 
 const About: React.FC = ({}: Props) => {
@@ -31,33 +32,14 @@ const About: React.FC = ({}: Props) => {
           </h4>
         </div>
       </section>
-      <section
-        className={cx("section", "section__skill", style["skill__container"])}
-      >
-        <div className={style["skill__container__left"]}></div>
-        <div className={style["skill__container__right"]}>
-          <TableSkill />
-        </div>
-      </section>
-      <section
-        className={cx(
-          "section",
-          style["section__interest"],
-          "custom__container"
-        )}
-      >
-        <h3>Also interest in.</h3>
-        <div className={style["interest__container"]}>
-          <div
-            className={cx(style["interest"], style["interest__medium"])}
-          ></div>
-          <div className={cx(style["interest"], style["interest__big"])}></div>
-          <div
-            className={cx(style["interest"], style["interest__small"])}
-          ></div>
-        </div>
-      </section>
-      <SectionImage height={90} img={LayoutBanner} />
+      <SectionSkill />
+      <SectionInterest />
+      <ImageParallax
+        id="test-3"
+        height={700}
+        width={window.innerWidth}
+        src={layoutBanner}
+      />
       <SectionTestimony />
       <section
         className={cx(
@@ -77,7 +59,12 @@ const About: React.FC = ({}: Props) => {
           </h4>
         </div>
       </section>
-      <SectionImage height={90} img={LayoutBanner} />
+      <ImageParallax
+        id="test-4"
+        height={700}
+        width={window.innerWidth}
+        src={layoutBanner}
+      />
     </div>
   );
 };

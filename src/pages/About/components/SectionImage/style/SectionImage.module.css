@@ -1,5 +1,15 @@
 .section__image {
+  background-color: red;
+  transform-style: preserve-3d;
+  perspective: 1px;
+  height: 120vh;
   width: 100vw;
-  background-position: center center;
-  background-size: cover;
+}
+
+.parallax__img {
+  position: sticky;
+  top: 0;
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
 }

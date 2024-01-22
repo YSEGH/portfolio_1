@@ -10,10 +10,11 @@
   --line-height: 325px;
   --width: 100vw;
   --max-width: 100vw;
-  --red: rgba(255, 77, 77, 1);
+  --red: #ff4d4d;
   --red-opacity: rgba(255, 77, 77, 0.8);
   --grey: #dbdbdb;
   --light-grey: #f7f7f7;
+  --max-width: 1440px;
   --screen-extra-large: 1440px;
   --screen-large: 1024px;
   --screen-medium: 780px;
@@ -22,18 +23,22 @@
 * {
   box-sizing: border-box;
 }
+*::-webkit-scrollbar {
+  display: none;
+}
 
 body {
   position: relative;
   margin: 0;
   padding: 0;
+  width: 100vw;
+  overflow: hidden;
 }
 #root {
   margin: 0 auto;
   padding: 0;
   max-width: var(--max-width);
   width: var(--width);
-  overflow: hidden;
 }
 
 button {
